@@ -17,7 +17,7 @@ const TabArr = [
     component: Screen,
   },
   {
-    route: "Search",
+    route: "Map",
     label: "Carte",
     type: Icons.FontAwesome5,
     icon: "map-marked-alt",
@@ -36,7 +36,7 @@ const Tab = createBottomTabNavigator();
 
 const animate1 = {
   0: { scale: 0.5, translateY: 7 },
-  0.92: { translateY: -34 },
+  0.92: { translateY: -20 },
   1: { scale: 1.2, translateY: -24 },
 };
 const animate2 = {
@@ -46,8 +46,8 @@ const animate2 = {
 
 const circle1 = {
   0: { scale: 0 },
-  0.3: { scale: 0.9 },
-  0.5: { scale: 0.2 },
+  0.3: { scale: 0.2 },
+  0.5: { scale: 0.4 },
   0.8: { scale: 0.7 },
   1: { scale: 1 },
 };
@@ -78,7 +78,7 @@ const TabButton = (props) => {
       activeOpacity={1}
       style={styles.container}
     >
-      <Animatable.View ref={viewRef} duration={1000} style={styles.container}>
+      <Animatable.View ref={viewRef} duration={500} style={styles.container}>
         <View style={styles.btn}>
           <Animatable.View ref={circleRef} style={styles.circle} />
           <Icon
@@ -98,9 +98,11 @@ const TabButton = (props) => {
 export default function AnimTab1() {
   return (
     <Tab.Navigator
+      initialRouteName="Map"
       screenOptions={{
         headerShown: false,
         tabBarStyle: styles.tabBar,
+        unmountOnBlur: true,
       }}
     >
       {TabArr.map((item, index) => {
@@ -148,12 +150,12 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.primaryDark,
     borderRadius: 25,
   },
   text: {
-    fontSize: 10,
+    fontSize: 12,
     textAlign: "center",
-    color: Colors.primary,
+    color: Colors.primaryDark,
   },
 });

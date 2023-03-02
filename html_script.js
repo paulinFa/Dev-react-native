@@ -15,7 +15,7 @@ const html_script = `
 <body style="padding: 0; margin: 0">
 <div id="mapid" style="width: 100%; height: 100vh;"></div>
 <script>
-	var mymap = L.map('mapid').setView([51.505, -0.09], 5);
+	var mymap = L.map('mapid',{zoomControl: false}).setView([51.505, -0.09], 5);
 	L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
     maxZoom: 18,

@@ -5,9 +5,15 @@ import openMap from "react-native-open-maps";
 import { WebView } from "react-native-webview";
 import html_script from "./html_script";
 import { StyleSheet, Text, View } from "react-native";
+import Constants from "expo-constants";
 
 export default function Map() {
-  return <WebView source={{ html: html_script }} style={styles.Webview} />;
+  return (
+    <>
+      <View style={styles.Rect}></View>
+      <WebView source={{ html: html_script }} style={styles.Webview} />
+    </>
+  );
 }
 const styles = StyleSheet.create({
   Container: {
