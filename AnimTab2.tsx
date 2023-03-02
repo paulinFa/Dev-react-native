@@ -19,15 +19,15 @@ const TabArr = [
   {
     route: "Map",
     label: "Carte",
-    type: Icons.FontAwesome5,
-    icon: "map-marked-alt",
+    type: Icons.MaterialCommunityIcons,
+    icon: "map-search-outline",
     component: Map,
   },
   {
     route: "Add",
     label: "Compte",
     type: Icons.MaterialCommunityIcons,
-    icon: "account",
+    icon: "account-outline",
     component: Web,
   },
 ];

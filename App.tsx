@@ -1,12 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import SafeAreaView from "react-native-safe-area-view";
-import { Provider } from "react-native-paper";
 import AnimTab2 from "./AnimTab2";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import type { StatusBarStyle } from "react-native";
-import { useState } from "react";
+import * as React from "react";
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -14,7 +11,7 @@ export default function App() {
     <>
       <StatusBar style="light" backgroundColor={"#00000060"} translucent />
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Landing">
+        <Stack.Navigator initialRouteName="AnimTab2">
           <Stack.Screen
             name="AnimTab2"
             component={AnimTab2}

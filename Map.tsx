@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Button } from "react-native";
-import MapView, { UrlTile } from "react-native-maps";
 import openMap from "react-native-open-maps";
 import { WebView } from "react-native-webview";
 import html_script from "./html_script";
@@ -10,7 +9,6 @@ import Constants from "expo-constants";
 export default function Map() {
   return (
     <>
-      <View style={styles.Rect}></View>
       <WebView source={{ html: html_script }} style={styles.Webview} />
     </>
   );
