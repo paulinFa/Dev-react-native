@@ -6,6 +6,7 @@ import Colors from "./Colors";
 import Screen from "./Screen";
 import * as Animatable from "react-native-animatable";
 import Map from "./Map";
+import Web from "./Web";
 
 const TabArr = [
   {
@@ -27,7 +28,7 @@ const TabArr = [
     label: "Compte",
     type: Icons.MaterialCommunityIcons,
     icon: "account",
-    component: Screen,
+    component: Web,
   },
 ];
 
